@@ -6,11 +6,14 @@ use LuceneSearchBundle\DependencyInjection\Compiler\CategoriesPass;
 use LuceneSearchBundle\DependencyInjection\Compiler\TaskPass;
 use LuceneSearchBundle\Tool\Install;
 use Pimcore\Extension\Bundle\AbstractPimcoreBundle;
+use Pimcore\Extension\Bundle\PimcoreBundleAdminClassicInterface;
+use Pimcore\Extension\Bundle\Traits\BundleAdminClassicTrait;
 use Pimcore\Extension\Bundle\Traits\PackageVersionTrait;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class LuceneSearchBundle extends AbstractPimcoreBundle
+class LuceneSearchBundle extends AbstractPimcoreBundle implements PimcoreBundleAdminClassicInterface
 {
+    use BundleAdminClassicTrait;
     use PackageVersionTrait;
 
     const PACKAGE_NAME = 'pringuin/pimcore-lucene-search';
