@@ -174,7 +174,7 @@ pimcore.plugin.luceneSearch.settings = Class.create({
 
                                                 window.setTimeout(function () {
                                                     _self.loadMask.hide();
-                                                }, 2000);
+                                                }, 5000);
                                             }
                                         });
                                     }.bind(this)

@@ -21,7 +21,7 @@ class LuceneSearchBundle extends AbstractPimcoreBundle implements PimcoreBundleA
     /**
      * @inheritDoc
      */
-    public function build(ContainerBuilder $container)
+    public function build(ContainerBuilder $container): void
     {
         $container->addCompilerPass(new TaskPass());
         $container->addCompilerPass(new CategoriesPass());
